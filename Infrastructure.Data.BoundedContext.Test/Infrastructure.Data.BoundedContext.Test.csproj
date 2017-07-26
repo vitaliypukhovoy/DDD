@@ -51,11 +51,37 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Initializer\AssemblyTestsInitializer.cs" />
-    <Compile Include="Repositories\NewsRepositoryTests.cs" />
-    <Compile Include="Repositories\PositionRepositoryTests.cs" />
+    <Compile Include="Repositories\DepartmentAggregateRepositoryTests.cs" />
+    <Compile Include="Repositories\EquipmentAggregateRepositotyTests.cs" />
+    <Compile Include="Repositories\OrganizationRepositoryTests.cs" />
     <Compile Include="Repositories\UserRepositoryTests.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.BoundedContext\Domain.BoundedContext.csproj">
+      <Project>{94b6a2a6-0750-4ded-8034-fe9a33c3e8d9}</Project>
+      <Name>Domain.BoundedContext</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.CrossCutting.IoC\Infrastructure.CrossCutting.IoC.csproj">
+      <Project>{394e94ae-29c8-48a7-8d54-da80a5a43059}</Project>
+      <Name>Infrastructure.CrossCutting.IoC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.CrossCutting.NetFramework\Infrastructure.CrossCutting.NetFramework.csproj">
+      <Project>{c8fdad7a-b860-40b0-b9ae-39c51e6b8b7c}</Project>
+      <Name>Infrastructure.CrossCutting.NetFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.CrossCutting.SeedWork\Infrastructure.CrossCutting.SeedWork.csproj">
+      <Project>{dae8f2e0-571b-4de6-838f-5dc55e22cb41}</Project>
+      <Name>Infrastructure.CrossCutting.SeedWork</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infrastructure.Data.BoundedContext\Infrastructure.Data.BoundedContext.csproj">
+      <Project>{3119482a-bfdc-4386-aca0-189ffcff855e}</Project>
+      <Name>Infrastructure.Data.BoundedContext</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

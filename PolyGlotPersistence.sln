@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22310.1
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0-Modeling and Design", "0-Modeling and Design", "{2B50C8C2-375A-42EA-A27F-1F61E5558351}"
 EndProject
@@ -80,6 +80,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET.MVC5.Client.Tests", "ASP.NET.MVC5.Client.Tests\ASP.NET.MVC5.Client.Tests.csproj", "{8A0549F8-E565-4413-AC10-915BFB88F025}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "PolyGlotPersitence.Modeling", "PolyGlotPersitence.Modeling\PolyGlotPersitence.Modeling.modelproj", "{9DFC44FF-6713-4243-9BE5-5B6EAEC13178}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlogingModule", "BlogingModule", "{CB0CB4C5-3279-47A3-A1A5-D946AF3E473D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -193,5 +195,6 @@ Global
 		{37C0A3E8-3808-4BBA-9D30-CD1BA941BFA0} = {DA4C8FBE-B5D5-46FB-938D-C57078489E1F}
 		{8A0549F8-E565-4413-AC10-915BFB88F025} = {DA4C8FBE-B5D5-46FB-938D-C57078489E1F}
 		{9DFC44FF-6713-4243-9BE5-5B6EAEC13178} = {2B50C8C2-375A-42EA-A27F-1F61E5558351}
+		{CB0CB4C5-3279-47A3-A1A5-D946AF3E473D} = {F0334DDB-ADC4-4CC5-99C7-419A92DE9E32}
 	EndGlobalSection
 EndGlobal

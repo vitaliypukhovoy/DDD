@@ -11,16 +11,16 @@ namespace Infrastructure.CrossCutting.IoC.Unity
     using Infrastructure.Data.BoundedContext.UnitOfWork;
     using Domain.BoundedContext.MembershipModule;
     using Infrastructure.Data.BoundedContext.MembershipModule.Repositories;
-    using Application.Core.BlogingModule;
-    using Application.Core.MembershipModule;
-    using Application.BoundedContext.BlogingModule;
+    //using Application.Core.BlogingModule;
+    //using Application.Core.MembershipModule;
+  //  using Application.BoundedContext.BlogingModule;
     using Application.BoundedContext.MembershipModule;
     using Domain.BoundedContext.ERPModule;
     using Infrastructure.Data.BoundedContext.ERPModule;
-    using Infrastructure.Data.BoundedContext.BlogingModule;
-    using Domain.BoundedContext.BlogingModule;
+   // using Infrastructure.Data.BoundedContext.Repositories.BlogingModule;
+    //using Domain.BoundedContext.BlogingModule;
     using Infrastructure.CrossCutting.NetFramework.Logging;
-    using Application.BoundedConext.ElearningModule;
+    //using Application.BoundedConext.ElearningModule;
 
     /// <summary>
     /// Implemented container in Microsoft Practices Unity
@@ -78,15 +78,15 @@ namespace Infrastructure.CrossCutting.IoC.Unity
             container.RegisterType<IPositionRepository, PositionRepository>(new TransientLifetimeManager());
             container.RegisterType<IUserRepository, UserRepository>(new TransientLifetimeManager());
           
-            container.RegisterType<INewsRepository, NewsRepository>(new TransientLifetimeManager());
-            container.RegisterType<IEventRepository, EventRepository>(new TransientLifetimeManager());
+            //container.RegisterType<INewsRepository, NewsRepository>(new TransientLifetimeManager());
+            //container.RegisterType<IEventRepository, EventRepository>(new TransientLifetimeManager());
             container.RegisterType<ILogger, TraceManager>(new TransientLifetimeManager());
 
             //Managers
             container.RegisterType<IUserManagementServices, UserManagementServices>(new TransientLifetimeManager());
-            container.RegisterType<INewsManagementServices, NewsManagementServices>(new TransientLifetimeManager());
-            container.RegisterType<IEventManagementServices, EventManagementServices>(new TransientLifetimeManager());
-            container.RegisterType<ICourseManangementServices, CourseManangementServices>(new TransientLifetimeManager());
+            //container.RegisterType<INewsManagementServices, NewsManagementServices>(new TransientLifetimeManager());
+            //container.RegisterType<IEventManagementServices, EventManagementServices>(new TransientLifetimeManager());
+            //container.RegisterType<ICourseManangementServices, CourseManangementServices>(new TransientLifetimeManager());
 
 
           
@@ -108,7 +108,7 @@ namespace Infrastructure.CrossCutting.IoC.Unity
         /// <param name="container">Container to configure</param>
         void ConfigureFakeContainer(IUnityContainer container)
         {
-            container.RegisterType<IMainBCUnitOfWork, FakeBCUnitOfWork>(new HierarchicalLifetimeManager(), new InjectionConstructor());
+            //container.RegisterType<IMainBCUnitOfWork, FakeBCUnitOfWork>(new HierarchicalLifetimeManager(), new InjectionConstructor());
            
         }
 

@@ -30,7 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,11 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlobAggregates\BlobAggregate.cs" />
+    <Compile Include="BlobAggregates\IBlobAggregateRepository.cs" />
     <Compile Include="ERPModule\Address\Address.cs" />
     <Compile Include="ERPModule\Address\IAddressRepository.cs" />
     <Compile Include="ERPModule\Customer\Customer.cs" />
     <Compile Include="ERPModule\Customer\ICustomerRepository.cs" />
     <Compile Include="ERPModule\Department\Department.cs" />
+    <Compile Include="ERPModule\Department\DepartmentAggregate.cs" />
+    <Compile Include="ERPModule\Department\IDepartmentAggregateRepository.cs" />
     <Compile Include="ERPModule\Department\IDepartmentRepository.cs" />
     <Compile Include="ERPModule\Employee\Employee.cs" />
     <Compile Include="ERPModule\Employee\IEmployeeRepository.cs" />
@@ -66,9 +79,24 @@
     <Compile Include="MembershipModule\User\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Messages1.Designer.cs" />
+    <Compile Include="StoreModule\Equipment\EquipmentAggregate.cs" />
+    <Compile Include="StoreModule\Equipment\IEquipmentAggregateRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Messages.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Domain.Core\Domain.Core.csproj">
+      <Project>{9f48320a-20e5-467d-a7de-bbdad7755692}</Project>
+      <Name>Domain.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BlogingModule\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
